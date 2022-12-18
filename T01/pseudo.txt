@@ -1,0 +1,60 @@
+Problem:
+
+	An algorithm that asks a user to enter a positive number repeatedly
+	until the user enters a zero value, then determines and outputs the
+	largest of the numbers that were input.
+	
+Pseudo code solution:
+
+	ask user to enter a positive number
+		add the number to a list
+		if the number is 0
+			output the largest number in the list
+			stop asking the user to input numbers
+		else
+			go back to the beginning 
+			
+			
+			
+
+Problem:
+
+	An algorithm that reads an arbitrary number of integers and then
+	returns their arithmetic average.
+	
+Pseudo code solution:
+
+	get list of integers
+	add all the numbers and divide by the total number of entries in the list
+	output average of numbers in the list 
+	
+	
+	
+	
+Problem:
+
+	An algorithm that reads a grocery list and prints out the products
+	(in alphabetical order) that are still left to buy.
+	
+Pseudo code solution:
+
+	get grocery list
+	sort the list in aphabetical order
+	go through each item in the sorted list
+		if the product in the list hasn't been bought yet
+			output product
+			
+			
+
+
+Problem:
+
+	An algorithm from the flowchart in the task
+	
+Pseudo code solution:
+
+	read value of X and Y
+	sum X and Y and assign the result to S
+	divide S by 2 and assign the result top A
+	multiply X by Y and assign the result to P
+	output the values of S, A, P

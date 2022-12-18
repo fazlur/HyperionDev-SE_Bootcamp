@@ -1,0 +1,11 @@
+Problem:
+
+	An algorithm that asks the user to enter four numbers, sorts those
+	numbers from smallest to largest and then prints the sorted
+	numbers.
+	
+Pseudo code solution:
+
+	ask user for four numbers
+	sort numbers inserted by user in ascending order
+	print sorted numbers
