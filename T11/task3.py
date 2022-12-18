@@ -17,22 +17,22 @@ athlete_total_time = run_time + cycle_time + swim_time
 #Checking if and which award the athlete is getting
 if athlete_total_time < qualifying_time:
     print(f"""
-Congratulations  your total time was: {athlete_total_time}
+Congratulations  your total time was: {athlete_total_time} minutes
 That is in inside the qualifying time, you are awarded Provincial Colors.
     """)
 elif athlete_total_time <= (qualifying_time + 5):
     print(f"""
-Your total time was: {athlete_total_time}
+Your total time was: {athlete_total_time} minutes
 As your time is within 5 minutes of the qualifying time you are awarded Provincial Half Colors.
     """)
 elif athlete_total_time <= (qualifying_time + 10):
     print(f"""
-Your total time was: {athlete_total_time}
+Your total time was: {athlete_total_time} minutes
 As your time is within 10 minutes of the qualifying time you are awarded Provincial Scroll.
     """)
 else:
     print(f"""
-Your total time was: {athlete_total_time}
+Your total time was: {athlete_total_time} minutes
 Unfortunately you are not getting an award today.
 Better luck next time!
     """)
