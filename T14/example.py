@@ -33,8 +33,8 @@ print("Example 2: ")
 i = 0
 
 while i < 100:
-print(i)
-i = i+1
+   print(i)
+   i = i+1
 # The above loop will print out all the numbers from 0 to 99, and then terminate.
 
 # ************ Example 3 ************
@@ -43,7 +43,7 @@ print("Example 3: ")
 i = 100
 
 while i < 50:
-print(i)
+   print(i)
 
 # The above while loop will not execute at all, because i is already bigger than 50.
 
@@ -53,8 +53,8 @@ print("Example 4: ")
 a=0
 
 while a < 10:
-print(a)
-a += 1       # a += 1 is equivalent to a = a + 1
+   print(a)
+   a += 1       # a += 1 is equivalent to a = a + 1
 
 # Initially a is set to 0.
 # The while loop then checks the condition (a < 10) to see if it is true.
@@ -73,8 +73,8 @@ print("Example 5: ")
 sum1 = 0
 i = 0       #initial even integer for the sum
 while sum1 <= 250:
-sum1 += i
-i += 2
-print(sum1)
+   sum1 += i
+   i += 2
+   print(sum1)
 
 # ****************** END OF EXAMPLE CODE ********************* # 
