@@ -1,10 +1,23 @@
-"""
-CAPSTONE PROJECT I
-Write a investment interest as well as home loan
-repayment calculator
-"""
+#########################################################
+#   CAPSTONE PROJECT I                                  #
+#   Write a investment interest as well as home loan    #
+#   repayment calculator                                #
+#########################################################    
 
 import math
+
+# Variable to hold the bond repayment formula and its legend
+# to be used when displaying the info to the user later in the code
+bond_repayment_formula = """
+The amount that a person will have to be repaid on a home loan each
+month is calculated as follows: repayment = x = (i.P)/(1 - (1+i)^(-n))
+
+In the formula above:
+	● `P` is the present value of the house.
+	● `i` is the monthly interest rate, calculated by dividing the annual
+	interest rate by 12.
+	● `n` is the number of months over which the bond will be repaid.
+"""
 
 # Variable to hold text to be displayed to user if simple interest is chosen
 # as the investment product later in the code
@@ -22,7 +35,7 @@ follows: A = P(1 + r) ^ t
 
 # Variable to hold text to be used when outputting the legend of the interest formula 
 # to the user when processing an investment simulation later in the code
-formula_legend = """
+investment_formula_legend = """
 In the formulae above:
     ● `r` is the interest
     ● `P` is the deposit amount
@@ -33,7 +46,7 @@ In the formulae above:
 ###  Program Processing and Execution ###
 
 
-# Getting the user to choose if they want to use the calculator for investment or bond
+# Getting the user to choose if they want to use the calculator for investments or bonds
 while True:
     investment_type = input("""
 
@@ -78,33 +91,60 @@ Type in 'simple' or 'compound' to choose the interest type: """)
         # Repeating the question due to invalid response
         else:
             print("""
-Your choice is not valid!
+You chose an invalid option, make sure that you type in 'simple' or 'compound' in your choice  
+----------------------------------------------------------------------------------------------
             """)
 
+     # Processing simple interest
     if (interest.lower() == "simple"):
         print(f"""
-Simple Interest formula:
+Simple Interest Formula:
 -----------------------
 {simple_formula}
-{formula_legend}
+{investment_formula_legend}
 
-Based on the values you have entered the total amount that you will have if you
-invest R{deposit_amount}, over {years_investing} years, at {interest_rate}%
-is: R{round(deposit_amount * (1 + (interest_rate / 100) * years_investing), 2)}
+Simple Interest Calculation:
+---------------------------
+Deposit Amount:     R{deposit_amount}
+Interest Rate:      {interest_rate}%
+Years Investing:    {years_investing}
 
-        """)
+Total Return:       R{round(deposit_amount * (1 + (interest_rate / 100) * years_investing), 2)} """)
+
     # Processing compound interest
     else:
         print(f"""
-Compound Interest formula:
--------------------------
+Compound Interest Formula:
+--------------------------
 {compound_formula}
-{formula_legend}
+{investment_formula_legend}
 
-Based on the values you have entered the total amount that you will have if you
-invest R{deposit_amount}, over {years_investing} years, at {interest_rate}%
-is: R{round(deposit_amount * math.pow((1 + (interest_rate / 100)), years_investing), 2)}
-        """)
+Compound Interest Calculation:
+------------------------------
+Deposit Amount:     R{deposit_amount}
+Interest Rate:      {interest_rate}%
+Years Investing:    {years_investing}
+
+Total Return:       R{round(deposit_amount * math.pow((1 + (interest_rate / 100)), years_investing), 2)} """)
+
 # Process bond information and provide calculation results
 else:
-    print(f"You chose {investment}")
+    print("Your choice was bond, provide the following information: ")
+    house_value = float(input("What is the value of the house: "))
+    interest_rate = float(input("What is the annual interest rate percentage: "))
+    months_repaying = int(input("How many repayment months: "))
+    #Calculating the value of i (interest rate divided by 12)
+    i = (interest_rate / 100) / 12
+    print(f"""
+Bond Repayment Formula:
+-----------------------
+{bond_repayment_formula}
+
+Bond Repayment Calculation:
+--------------------------
+
+House Value:        R{round(house_value, 2)}
+Annual Interest:    {round(interest_rate)}%
+Months Repaying:    {months_repaying}
+
+Monthly Repayments: R{round((i * house_value) / (1 - (1 + i) ** (-months_repaying)),2)} """)
