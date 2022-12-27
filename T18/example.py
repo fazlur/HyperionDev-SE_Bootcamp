@@ -132,7 +132,7 @@ print("\nExample 10:")
 foodList = ['Pizza', 'Burger', 'Fries', 'Pasta', 'Salad'] #Define a list of strings
 
 for food in foodList:
-print(food)
+        print(food)
 # This loop prints out every item in the list. 
 # This is a very powerful tool in Python and shows how you can simply loop through a List.
 
@@ -142,7 +142,7 @@ print("\nExample 11:")
 numbers = [1,2,3,4]
 
 for num in numbers:
-print(num)
+        print(num)
 # Any type of list can be looped over using this construct.
 # The above will print out the numbers 1 to 4 - i.e. the entries in list 'numbers'.
 
@@ -154,14 +154,14 @@ print("\nExample 12:")
 groceryList = ['Bread', 'Milk', 'Butter', 'Cheese', 'Cereal']
 
 if 'Apples' in groceryList:
-print('The item Apples was found in the list groceryList')
+        print('The item Apples was found in the list groceryList')
 else:
-print('The item Apples was not found in the list groceryList')
+        print('The item Apples was not found in the list groceryList')
         
 # This is a much quicker way than looping through all the items, such as if you did:
 for item in groceryList:
-if item == 'Apples':
-print('The item Apples was found in the list groceryList')
+        if item == 'Apples':
+                print('The item Apples was found in the list groceryList')
 
 # ================== Using The xrange Function ==================
 # The range function is a special Python function, that will automatically generate a list of integers within a specified range.
