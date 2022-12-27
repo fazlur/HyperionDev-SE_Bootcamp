@@ -9,5 +9,5 @@ while True:
     else:
         incorrect_names.append(name)
 
-#Printing out the lust populated with incorrect names
+#Printing out the list populated with incorrect names
 print(f"Incorrect names: {incorrect_names}")
