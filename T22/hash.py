@@ -6,3 +6,4 @@ countryMap = {
 }
 
 # print(countryMap['Sweden']) Would print Stockholm
+print(countryMap['Sweden'])
