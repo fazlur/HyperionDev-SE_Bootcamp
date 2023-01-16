@@ -14,6 +14,8 @@ price = {
         menu[2] : 3.99,
         menu[3] : 5.20,
         }
+# Variable to hold total of stock value
+total_stock_worth = 0
 
 # Variables to hold display
 staring_line = "\n───[INVENTORY]───────────────────────────────────────────────────\n"
@@ -26,7 +28,10 @@ print(menu_header)
 
 for item in menu:
     if item in stock.keys():
+        total_stock_worth +=  (price[item] * stock[item])
         print(f'''
 {item}\t\t{stock[item]}\t\t${price[item]}\t\t${round(price[item] * stock[item], 2)}''')
+
+print("\n\nTotal Stock Worth: $"+str(round(total_stock_worth, 2)))
 
 print(bottom_line)

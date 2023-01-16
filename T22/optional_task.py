@@ -14,7 +14,7 @@ abbreviation_dictionary['SSH'] = "Secure Shell"
 # Asking the user 
 user_input = input("What abbreviation would you like to know the meaning: ")
 
-# Program logic
+# Converting input into upper case and check if it exist as dictionary key, otherwise printing that it could not be found
 if user_input.upper() in abbreviation_dictionary.keys():
     print(f'''{user_input.upper()}  : {abbreviation_dictionary[user_input.upper()]}''')
 else:
