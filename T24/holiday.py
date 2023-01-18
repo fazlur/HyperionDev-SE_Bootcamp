@@ -19,13 +19,21 @@ def car_rental(days, daily_rate = 20):
     car_total = days * daily_rate
     return car_total
 
-def holiday_cost(num_nights, city, car_days):
-    holiday_total = holiday_cost(num_nights) + plane_cost(city) + car_rental(car_days)
+def holiday_cost(num_nights, flight, car_days):
+    holiday_total = num_nights + flight + car_days
     return holiday_total
 
-user_hotel = input("How many nights in the hotel: ")
-#user_city = input("Which city you will be visiting: ")
-#user_car = input("How long will you need a car for: ")
+user_hotel = int(input("How many nights in the hotel: "))
+user_city = input("Which city you will be visiting: ")
+user_car = int(input("How long will you need a car for: "))
 
-print(hotel_cost(user_hotel))
+hotel = hotel_cost(user_hotel)
+city = plane_cost(user_city)
+car = car_rental(user_car)
+
+print(hotel)
+print(city)
+print(car)
+
+print(holiday_cost(hotel,city, car))
 
