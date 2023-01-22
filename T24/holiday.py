@@ -83,7 +83,7 @@ Hotel:
     Cost:              ${hotel_cost(user_hotel)}
 
 Flight:
-    Destination:        {user_city.upper()}
+    Destination:       {user_city.upper()}
     Cost:              ${plane_cost(user_city)}
 
 Car:
@@ -93,6 +93,7 @@ Car:
 
 
 Total Holidays Cost:   ${holiday_cost(user_hotel,user_city, user_car)}
+
 ''')
 
 print(bottom_line)
