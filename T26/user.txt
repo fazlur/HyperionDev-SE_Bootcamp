@@ -1,2 +1,4 @@
 admin, adm1n
 user1, password123
+Faz, test1
+user2, test2

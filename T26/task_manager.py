@@ -5,6 +5,9 @@ import datetime
 from task_manager_art import welcome_message, admin_menu, bottom_line, user_menu, login_line, add_user_line, \
      wrong_user, wrong_password, failed_login, new_task_line, goodbye
 
+# Importing function from task_manager_functions file
+from task_manager_functions import reg_user
+
 #====Login Section====
 
 print(welcome_message)
@@ -56,24 +59,8 @@ e - Exit
 : ''').lower()
     # Only allowing the admin user to register new users, even if another user types r
     if menu == 'r' and username.lower() == "admin":
-        while True:
-            print(add_user_line)
-            new_user = input("Username: ")
-            # Getting password and confirming if they match
-            while True:
-                password = input("Password: ")
-                password_retype = input("Retype Password: ")
-                print(bottom_line)
-                if password != password_retype:
-                   print(wrong_password)
-                else:
-                    break
-            break
-
-        # Writing the  username/password to file
-        user_file_out = open('user.txt', 'a')
-        user_file_out.write("\n" + new_user + ", " + password)
-        user_file_out.close()
+        # Calling the reg_user function imported from the task_manager_functions file
+        reg_user()
 
 
     elif menu == 'a':
